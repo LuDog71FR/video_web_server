@@ -15,15 +15,15 @@ def generate_thumbnails(video_directory, thumbnail_directory, force=False):
                 thumbnail_path = os.path.join(thumbnail_directory, f"{os.path.splitext(file)[0]}.png")
                 
                 if os.path.exists(thumbnail_path) and not force:
-                    # Si la miniature existe déjà, passer à la vidéo suivante
+                    # If thumbnail already exists and force is False, skip 
                     continue
 
-                # Extraire une image à 2 secondes comme miniature
+                # Extract a frame from the video and save it as a thumbnail
                 try:
                     clip = VideoFileClip(video_path)
                     clip.save_frame(thumbnail_path, t=2.0)
                 except:
-                    print(f"Impossible de générer une miniature pour {video_path}")
+                    print(f"Unable to extrat thumbnail from {video_path}")
 
 
 if __name__ == '__main__':

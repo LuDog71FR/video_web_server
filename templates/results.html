@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats de recherche</title>
+    <title>Search results</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Résultats pour "{{ keyword }}"</h1>
+    <h1>Results for "{{ keyword }}"</h1>
     <ul>
         {% for video, thumbnail in videos %}
         <li>
@@ -17,6 +17,6 @@
         {% endfor %}
     </ul>
 
-    <a href="/" class="button-link">Nouvelle recherche</a>
+    <a href="/" class="button-link">New search</a>
 </body>
 </html>
