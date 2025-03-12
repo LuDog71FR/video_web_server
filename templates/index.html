@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recherche de vidéos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Recherche de vidéos</h1>
@@ -11,5 +12,12 @@
         <input type="text" name="keyword" placeholder="Mot-clé..." required>
         <button type="submit">Rechercher</button>
     </form>
+    <p>
+        <a href="/search" class="button-link">Voir toutes les vidéos</a>
+    </p>
+    <p>
+      Nombre de vidéos : {{ video_count }}
+    </p>
 </body>
 </html>
+

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Résultats pour "{{ keyword }}"</h1>
+    <ul>
+        {% for video, thumbnail in videos %}
+        <li>
+          <img src="{{ url_for('thumbnails', filename=thumbnail) }}" alt="{{ video }}" width="100" />
+          <div><a href="{{ url_for('watch', filename=video) }}">{{ video.split('/')[-1].rsplit('.', 1)[0] }}</a></div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/" class="button-link">Nouvelle recherche</a>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+}
+
+form {
+    margin-bottom: 2em;
+}
+
+input[type="text"] {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 300px;
+    max-width: 100%;
+}
+
+button, .button-link {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+button:hover, .button-link:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+li {
+    background-color: white;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 1em); /* Trois colonnes */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+li img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
